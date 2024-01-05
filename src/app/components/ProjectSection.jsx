@@ -12,7 +12,7 @@ const projectsData = [
       "A personal portfolio website using ReactJS, showcasing all my skills and projects",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/adarsh-jha-dev/portfolio",
     previewUrl: "/",
   },
   {

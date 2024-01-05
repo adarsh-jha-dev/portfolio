@@ -6,6 +6,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  lightMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -16,8 +17,14 @@ module.exports = {
     },
     colors: {
       ...colors,
-      primary: colors.green,
+      primary: colors.purple,
       secondary: colors.blue,
+      light: {
+        body: {
+          background: "#ffffff",
+          text: "#000000",
+        },
+      },
     },
   },
   plugins: [],
