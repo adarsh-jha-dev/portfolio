@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import { useSnapshot } from "valtio";
+import state from "../store";
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -23,6 +25,9 @@ const achievementsList = [
 ];
 
 const AchievementsSection = () => {
+  const snap = useSnapshot(state);
+  const isDarkMode = snap.mode === "dark";
+
   return (
     <div className="py-8 px-4 xl:gap-32 sm:py-16 xl:px-16">
       <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
@@ -32,13 +37,21 @@ const AchievementsSection = () => {
               key={index}
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
+              <h2
+                className={`${
+                  isDarkMode ? "text-white" : "text-black"
+                } text-4xl font-bold flex flex-row`}
+              >
                 {achievement.prefix}
                 <AnimatedNumbers
+                  key={isDarkMode ? "dark" : "light"}
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className="text-white text-4xl font-bold"
+                  className="text-4xl font-bold"
+                  fontStyle={{
+                    color: isDarkMode ? "white" : "black",
+                  }}
                   configs={(_, index) => {
                     return {
                       mass: 1,
@@ -47,9 +60,16 @@ const AchievementsSection = () => {
                     };
                   }}
                 />
+
                 {achievement.postfix}
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <p
+                className={`${
+                  isDarkMode ? "text-[#ADB7BE]" : "text-black"
+                } text-base`}
+              >
+                {achievement.metric}
+              </p>
             </div>
           );
         })}

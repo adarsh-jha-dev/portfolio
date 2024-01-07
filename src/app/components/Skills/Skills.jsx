@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import SkillCard from "./SkillCard/SkillCard";
 import "./Skills.css";
 import SkillsInfoCard from "./SkillsInfoCard/SkillsInfoCard";
+import { useSnapshot } from "valtio";
+import state from "@/app/store";
 
 const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState(SKILLS[0]);
@@ -12,9 +14,16 @@ const Skills = () => {
     setSelectedSkill(data);
   };
 
+  const snap = useSnapshot(state);
+  const isDarkMode = snap.mode === "dark";
+
   return (
-    <section className="skills-container">
-      <h5 className="text-center text-6xl">
+    <section id="skills" className="skills-container">
+      <h5
+        className={`${
+          isDarkMode ? "text-white" : "text-black"
+        } text-center text-6xl`}
+      >
         My <span className="text-primary-800">Skills</span>
       </h5>
 

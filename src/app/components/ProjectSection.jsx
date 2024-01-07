@@ -3,6 +3,8 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { useSnapshot } from "valtio";
+import state from "../store";
 
 const projectsData = [
   {
@@ -75,9 +77,16 @@ const ProjectsSection = () => {
     animate: { y: 0, opacity: 1 },
   };
 
+  const snap = useSnapshot(state);
+  const isDarkMode = snap.mode === "dark";
+
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2
+        className={`text-center text-4xl font-bold ${
+          isDarkMode ? "text-white" : "text-[#7527c5]"
+        } mt-4 mb-8 md:mb-12`}
+      >
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
@@ -97,7 +106,10 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul
+        ref={ref}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 sm:gap-4 gap-8"
+      >
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}

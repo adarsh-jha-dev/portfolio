@@ -11,10 +11,6 @@
   font-size: 1.2rem;
   font-weight: 500;
   padding: 0.8rem 2rem;
-  background-clip: border-box;
-  background: linear-gradient(100deg, #ac96ff 0%, #7c5fe6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   border-bottom: 1.5px solid #6751b9;
 }
 
@@ -31,10 +27,6 @@
 .skills-info p {
   font-size: 1rem;
   font-weight: 500;
-}
-
-.skills-info .percentage {
-  color: #ff2bdf;
 }
 
 .skill-progress-bg {

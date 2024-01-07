@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useSnapshot } from "valtio";
+import state from "../store";
 
 const variants = {
   default: { width: 0 },
@@ -7,7 +9,12 @@ const variants = {
 };
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const snap = useSnapshot(state);
+  const isDarkMode = snap.mode === "dark";
+
+  const buttonClasses = isDarkMode
+    ? `${active ? "text-white" : "text-[#7e6969]"}`
+    : `${active ? "text-[#7527c5]" : "text-[#ae61c7]"}`;
 
   return (
     <button onClick={selectTab}>

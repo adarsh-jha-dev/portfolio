@@ -2,7 +2,8 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-// import { useSelector } from "react-redux";
+import { useSnapshot } from "valtio";
+import state from "../store";
 
 const TAB_DATA = [
   {
@@ -41,9 +42,9 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  // const mode = useSelector((state) => state.mode.theme);
+  const snap = useSnapshot(state);
+  const isDarkMode = snap.mode === "dark";
 
-  // const isDarkMode = mode === "dark";
   const [tab, setTab] = useState("education");
   const [isPending, startTransition] = useTransition();
 
@@ -54,12 +55,25 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image
+          src="/images/about-image.png"
+          width={500}
+          alt="about-me"
+          height={500}
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <h2
+            className={`${
+              isDarkMode ? "text-white" : "text-[#7527c5]"
+            } text-4xl font-bold mb-4`}
+          >
+            About Me
+          </h2>
+          <p
+            className={`${isDarkMode ? "text-white" : "text-black"} lg:text-lg`}
+          >
             I am a aspiring full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, TypeScript, React, Redux, Zustand, Node.js,
@@ -68,7 +82,11 @@ const AboutSection = () => {
             team player and I am excited to work with others to create amazing
             applications.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div
+            className={`${
+              isDarkMode ? "text-white" : "text-black"
+            } flex flex-row justify-start mt-8`}
+          >
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
@@ -84,7 +102,7 @@ const AboutSection = () => {
               Certifications{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className={`${isDarkMode ? "text-white" : "text-black"} mt-8`}>
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>

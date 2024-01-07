@@ -5,13 +5,17 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import DarkModeToggle from "react-dark-mode-toggle";
-// import { useDispatch, useSelector } from "react-redux";
-// import { setTheme } from "../store/ModeSlice";
+import { useSnapshot } from "valtio";
+import state from "../store";
 //
 const navLinks = [
   {
     title: "About",
     path: "#about",
+  },
+  {
+    title: "Skills",
+    path: "#skills",
   },
   {
     title: "Projects",
@@ -24,19 +28,16 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  // const mode = useSelector((state) => state.mode.theme);
-  // const dispatch = useDispatch();
-  const [isDarkMode, setIsDarkMode] = useState(() => false);
+  const snap = useSnapshot(state);
+  const [isDarkMode, setIsDarkMode] = useState(snap.mode === "dark");
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-  // const handleMode = (e) => {
-  //   e.preventDefault();
-  //   if (mode === "dark") {
-  //     dispatch(setTheme({ theme: "dark" }));
-  //   } else {
-  //     dispatch(setTheme({ theme: "light" }));
-  //   }
-  // };
+  const handleMode = () => {
+    // TODO : save the user preference in localStorage
+
+    state.mode = snap.mode === "dark" ? "light" : "dark";
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
@@ -45,10 +46,9 @@ const Navbar = () => {
           Adarsh
         </Link>
         <div className="mobile-menu block md:hidden">
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center space-x-1">
             <DarkModeToggle
-              className=" items-center mt-2 ml-1"
-              onChange={setIsDarkMode}
+              onChange={handleMode}
               checked={isDarkMode}
               size={50}
             />
@@ -78,7 +78,7 @@ const Navbar = () => {
             ))}
             {!navbarOpen && (
               <DarkModeToggle
-                onChange={setIsDarkMode}
+                onChange={handleMode}
                 checked={isDarkMode}
                 size={80}
               />

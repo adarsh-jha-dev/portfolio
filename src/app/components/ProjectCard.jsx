@@ -1,12 +1,21 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useSnapshot } from "valtio";
+import state from "../store";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+  const snap = useSnapshot(state);
+  const isDarkMode = snap.mode === "dark";
+
   return (
-    <div>
+    <div
+      className={`lg:h-[500px] border ${!isDarkMode && "border-black"} ${
+        isDarkMode && "border-white"
+      }  pb-4 rounded-xl`}
+    >
       <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
+        className={`h-52 md:h-72 rounded-t-xl relative group`}
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       >
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
@@ -29,8 +38,16 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         </div>
       </div>
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+        <h5
+          className={`${
+            isDarkMode ? "text-white" : "text-[#8d1fa3]"
+          } text-xl font-semibold mb-2`}
+        >
+          {title}
+        </h5>
+        <p className={`${isDarkMode ? "text-[#ADB7BE]" : "text-black"}`}>
+          {description}
+        </p>
       </div>
     </div>
   );

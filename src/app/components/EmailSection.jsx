@@ -7,6 +7,8 @@ import InstagramIcon from "../../../public/instagram.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { Loader2 } from "lucide-react";
+import state from "../store";
+import { useSnapshot } from "valtio";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -48,6 +50,9 @@ const EmailSection = () => {
     }
   };
 
+  const snap = useSnapshot(state);
+  const isDarkMode = snap.mode === "dark";
+
   return (
     <section
       id="contact"
@@ -55,10 +60,18 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
+        <h5
+          className={`text-xl font-bold ${
+            isDarkMode ? "text-white" : "text-black"
+          } my-2`}
+        >
           Let&apos;s Connect
         </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <p
+          className={`${
+            isDarkMode ? "text-[#ADB7BE]" : "text-black"
+          } mb-4 max-w-md`}
+        >
           {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
@@ -66,10 +79,18 @@ const EmailSection = () => {
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://www.github.com/adarsh-jha-dev">
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image
+              className="bg-black rounded-full"
+              src={GithubIcon}
+              alt="Github Icon"
+            />
           </Link>
           <Link href="https://www.linkedin.com/in/adarshjha0410">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+            <Image
+              className="rounded-full"
+              src={LinkedinIcon}
+              alt="Linkedin Icon"
+            />
           </Link>
           <Link href="https://twitter.com/Adarsh_Jha_0410">
             <Image src={TwitterIcon} alt="Twitter Icon" />
@@ -89,7 +110,9 @@ const EmailSection = () => {
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
+                className={`${
+                  isDarkMode ? "text-white" : "text-black"
+                } block mb-2 text-sm font-medium`}
               >
                 Your email
               </label>
@@ -105,7 +128,9 @@ const EmailSection = () => {
             <div className="mb-6">
               <label
                 htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
+                className={`${
+                  isDarkMode ? "text-white" : "text-black"
+                } block mb-2 text-sm font-medium`}
               >
                 Subject
               </label>
@@ -121,7 +146,9 @@ const EmailSection = () => {
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
+                className={`${
+                  isDarkMode ? "text-white" : "text-black"
+                } block mb-2 text-sm font-medium`}
               >
                 Message
               </label>
