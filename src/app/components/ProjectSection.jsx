@@ -57,6 +57,16 @@ const projectsData = [
     gitUrl: "https://github.com/adarsh-jha-dev/nextjs-dashboard",
     previewUrl: "https://nextjs-dashboard-puce-seven-87.vercel.app/",
   },
+  {
+    id: 6,
+    title: "Three JS T-Shirt Customizer using AI",
+    description:
+      "First ever project using three.js and react-fiber. A beautiful react application where one can design and visualize a T-Shirt with different colors and logos. One can upload a logo of it's own and design the T-Shirt. Users can download the customized T-shirt image as well. Integrated Hugging face's text-to-image generation model to generate the image/logo based on a prompt.",
+    image: "/images/projects/6.png",
+    tag: ["All", "web"],
+    gitUrl: "https://github.com/adarsh-jha-dev/threejs",
+    previewUrl: "",
+  },
 ];
 
 const ProjectsSection = () => {

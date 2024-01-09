@@ -10,11 +10,19 @@ const SkillCard = ({ title, imageUrl, isActive, onClick }) => {
 
   return (
     <div
-      className={`skills-card ${isActive ? "active" : ""}`}
+      className={`shadow-lg transition-all duration-700 hover:scale-110 skills-card ${
+        isActive ? "active" : ""
+      }`}
       onClick={() => onClick()}
     >
       <div className="skill-icon bg-primary-900 flex justify-center align-center">
-        <Image className="icon bg-primary-500" src={imageUrl} alt={title} />
+        <Image
+          width={50}
+          height={50}
+          className="icon bg-primary-500"
+          src={imageUrl}
+          alt={title}
+        />
       </div>
       <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
         {title}

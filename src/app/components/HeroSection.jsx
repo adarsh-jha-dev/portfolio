@@ -38,12 +38,12 @@ const HeroSection = () => {
                 "A UI/UX Designer",
                 1000,
               ]}
+              className={`${
+                isDarkMode ? "text-white" : "text-black"
+              } lg:text-[70px] md:text-[30px]`}
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              style={{
-                color: `${isDarkMode ? "white" : "black"}`,
-              }}
             />
           </h1>
           <p

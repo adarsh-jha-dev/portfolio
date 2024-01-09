@@ -1,7 +1,7 @@
 export const SKILLS = [
   {
     title: "Frontend",
-    icon: "./assets/images/frontend-icon.png",
+    icon: "/assets/images/frontend-icon.png",
     skills: [
       {
         skill: "HTML5",
@@ -34,7 +34,7 @@ export const SKILLS = [
   },
   {
     title: "Backend",
-    icon: "./assets/images/backend-icon.png",
+    icon: "/assets/images/backend-icon.png",
     skills: [
       {
         skill: "NodeJS",
@@ -46,7 +46,7 @@ export const SKILLS = [
   },
   {
     title: "Databases",
-    icon: "./assets/images/database-icon.png",
+    icon: "/assets/images/database-icon.png",
     skills: [
       {
         skill: "MongoDB",
@@ -64,7 +64,7 @@ export const SKILLS = [
   },
   {
     title: "Tools",
-    icon: "./assets/images/tools-icon.png",
+    icon: "/assets/images/tools-icon.png",
     skills: [
       {
         skill: "Git & GitHub",
