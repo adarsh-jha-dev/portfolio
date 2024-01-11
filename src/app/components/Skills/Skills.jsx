@@ -7,11 +7,14 @@ import "./Skills.css";
 import SkillsInfoCard from "./SkillsInfoCard/SkillsInfoCard";
 import { useSnapshot } from "valtio";
 import state from "@/app/store";
+import { useRouter } from "next/navigation";
 
 const Skills = () => {
+  const router = useRouter();
   const [selectedSkill, setSelectedSkill] = useState(SKILLS[0]);
   const handleSelectSkill = (data) => {
     setSelectedSkill(data);
+    router.push(`#skills`);
   };
 
   const snap = useSnapshot(state);

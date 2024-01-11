@@ -65,7 +65,7 @@ const projectsData = [
     image: "/images/projects/6.png",
     tag: ["All", "web"],
     gitUrl: "https://github.com/adarsh-jha-dev/threejs",
-    previewUrl: "",
+    previewUrl: "https://client-umber-nine.vercel.app",
   },
 ];
 

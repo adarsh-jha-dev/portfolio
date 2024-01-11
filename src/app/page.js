@@ -24,7 +24,10 @@ export default function Home() {
       };
 
   return (
-    <main className="flex min-h-screen flex-col" style={activeStyles}>
+    <main
+      className="flex transition-colors duration-300 ease-in min-h-screen flex-col"
+      style={activeStyles}
+    >
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
