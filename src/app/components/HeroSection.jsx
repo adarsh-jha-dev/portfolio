@@ -90,7 +90,11 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div
+            className={`rounded-full border border-${
+              isDarkMode ? "white" : "black"
+            } w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative`}
+          >
             <Image
               src="/images/hero--image.jpg"
               alt="hero image"
