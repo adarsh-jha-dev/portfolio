@@ -11,6 +11,16 @@ const HeroSection = () => {
   const snap = useSnapshot(state);
   const isDarkMode = snap.mode === "dark";
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedMode = localStorage.getItem("portfolio-mode1234");
+      if (storedMode) {
+        // Update the state with the stored mode
+        state.mode = storedMode;
+      }
+    }
+  }, []);
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">

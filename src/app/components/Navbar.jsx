@@ -48,7 +48,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center space-x-1">
             <DarkModeToggle
               onChange={handleMode}
-              checked={isDarkMode}
+              checked={!isDarkMode}
               size={50}
             />
             {!navbarOpen ? (
@@ -78,7 +78,7 @@ const Navbar = () => {
             {!navbarOpen && (
               <DarkModeToggle
                 onChange={handleMode}
-                checked={isDarkMode}
+                checked={!isDarkMode}
                 size={80}
               />
             )}
