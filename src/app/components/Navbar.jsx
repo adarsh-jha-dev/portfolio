@@ -36,6 +36,7 @@ const Navbar = () => {
     // TODO : save the user preference in localStorage
 
     state.mode = snap.mode === "dark" ? "light" : "dark";
+    localStorage.setItem("portfolio-mode1234", state.mode);
     setIsDarkMode(!isDarkMode);
   };
 

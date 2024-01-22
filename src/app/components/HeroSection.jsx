@@ -38,14 +38,20 @@ const HeroSection = () => {
                 "A UI/UX Designer",
                 1000,
               ]}
-              className={`${
-                isDarkMode ? "text-white" : "text-black"
-              } lg:text-[70px] md:text-[30px]`}
+              className={`text-white lg:text-[70px] md:text-[30px]`}
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
           </h1>
+          {/* <small
+            className={`${
+              isDarkMode ? "text-[#ADB7BE]" : "text-black"
+            } text-base`}
+          >
+            [If the color of this type animation doesn't change on changing the
+            theme, please refresh.]
+          </small> */}
           <p
             className={`${
               isDarkMode ? "text-[#ADB7BE]" : "text-black"
