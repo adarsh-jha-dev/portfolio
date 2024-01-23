@@ -31,9 +31,9 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1
-            className={`i${
+            className={`${
               isDarkMode ? "text-white" : "text-black"
-            } mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold`}
+            } mb-4 sm:text-30 lg:text-8xl lg:leading-normal font-extrabold`}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 "A UI/UX Designer",
                 1000,
               ]}
-              className={`text-white lg:text-[70px] md:text-[30px]`}
+              className={`text-white sm:text-30`}
               wrapper="span"
               speed={50}
               repeat={Infinity}
@@ -101,14 +101,14 @@ const HeroSection = () => {
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div
-            className={`rounded-full border border-${
+            className={`rounded-full ml-[20px] md:ml-[10px] border border-${
               isDarkMode ? "white" : "black"
             } w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative`}
           >
             <Image
               src="/images/hero--image.jpg"
               alt="hero image"
-              className="absolute transform rounded-full -translate-x-1/2 md:ml-[25px] -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute transform rounded-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
               height={300}
             />
