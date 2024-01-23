@@ -33,7 +33,7 @@ const HeroSection = () => {
           <h1
             className={`${
               isDarkMode ? "text-white" : "text-black"
-            } mb-4 sm:text-30 lg:text-8xl lg:leading-normal font-extrabold`}
+            } mb-4 text-4xl sm:text-4xl h-32 md:h-auto lg:h-auto lg:text-8xl lg:leading-normal font-extrabold`}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 "A UI/UX Designer",
                 1000,
               ]}
-              className={`text-white sm:text-30`}
+              className={`text-white`}
               wrapper="span"
               speed={50}
               repeat={Infinity}
