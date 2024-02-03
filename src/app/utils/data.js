@@ -5,31 +5,39 @@ export const SKILLS = [
     skills: [
       {
         skill: "HTML5",
-        percentage: "80%",
+        icon: "/assets/skills/frontend/html.svg",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
         skill: "Tailwind CSS",
-        percentage: "75%",
+        icon: "/assets/skills/frontend/tailwind.svg",
         docs: "https://tailwindcss.com/docs/installation",
       },
       {
         skill: "Bootstrap",
-        percentage: "70%",
-        docs: "https://getbootstrap.com/",
+        icon: "assets/skills/frontend/bootstrap.svg",
+        docs: "https://getbootstrap.com",
       },
       {
         skill: "JavaScript",
-        percentage: "75%",
+        icon: "/assets/skills/frontend/javascript.svg",
         docs: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         skill: "TypeScript",
-        percentage: "70%",
+        icon: "/assets/skills/frontend/typescript.svg",
         docs: "https://www.typescriptlang.org/docs/",
       },
-      { skill: "ReactJS", percentage: "80%", docs: "https://react.dev/" },
-      { skill: "NextJS", percentage: "75%", docs: "https://nextjs.org/docs" },
+      {
+        skill: "ReactJS",
+        icon: "/assets/skills/frontend/react.svg",
+        docs: "https://react.dev/",
+      },
+      {
+        skill: "NextJS",
+        icon: "/assets/skills/frontend/nextjs.svg",
+        docs: "https://nextjs.org/docs",
+      },
     ],
   },
   {
@@ -38,10 +46,25 @@ export const SKILLS = [
     skills: [
       {
         skill: "NodeJS",
-        percentage: "70%",
+
+        icon: "/assets/skills/backend/nodejs.svg",
         docs: "https://nodejs.org/docs/latest/api/",
       },
-      { skill: "ExpressJS", percentage: "65%", docs: "https://expressjs.com/" },
+      {
+        skill: "ExpressJS",
+        icon: "/assets/skills/backend/expressjs.png",
+        docs: "https://expressjs.com/",
+      },
+      {
+        skill: "AppWrite",
+        icon: "/assets/skills/backend/appwrite.svg",
+        docs: "https://appwrite.io",
+      },
+      {
+        skill: "Firebase",
+        icon: "/assets/skills/backend/firebase.svg",
+        docs: "https://firebase.google.com/",
+      },
     ],
   },
   {
@@ -50,14 +73,19 @@ export const SKILLS = [
     skills: [
       {
         skill: "MongoDB",
-        percentage: "80%",
+
+        icon: "/assets/skills/database/mongodb.svg",
         docs: "https://www.mongodb.com/docs/",
       },
-      { skill: "MySQL", percentage: "60%", docs: "https://dev.mysql.com/doc/" },
+      {
+        skill: "MySQL",
+        icon: "/assets/skills/database/mysql.svg",
+        docs: "https://dev.mysql.com/doc/",
+      },
       // TODO : Uncomment this whenever a project is made using Postgres
       // {
       //   skill: "PostgreSQL",
-      //   percentage: "50%",
+      //   icon : "/assets/skills/database/postgresql.svg",
       //   docs: "https://www.postgresql.org/docs/",
       // },
     ],
@@ -68,18 +96,14 @@ export const SKILLS = [
     skills: [
       {
         skill: "Git & GitHub",
-        percentage: "80%",
-        docs: "https://git-scm.com/doc",
+
+        icon: "/assets/skills/tools/git.svg",
+        docs: "https://git-scm.com/",
       },
       {
-        skill: "Visual Studio Code",
-        percentage: "80%",
-        docs: "https://code.visualstudio.com/docs",
-      },
-      {
-        skill: "Responsive Design",
-        percentage: "70%",
-        docs: "https://www.w3schools.com/html/html_responsive.asp",
+        skill: "Figma",
+        icon: "/assets/skills/tools/figma.svg",
+        docs: "https://www.figma.com/",
       },
     ],
   },

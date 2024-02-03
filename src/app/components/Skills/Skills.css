@@ -54,14 +54,14 @@
 
   .skills,
   .skills-content {
+    width: 100%;
     grid-gap: 2rem;
   }
 }
 
-@media (max-width: 764px) {
+@media (max-width: 1290px) {
   .skills-content {
-    flex-direction: column-reverse;
-    gap: 3rem;
+    flex-direction: column;
   }
 
   .skills,
@@ -78,6 +78,15 @@
   .skills-container::before {
     width: 18rem;
     height: 18rem;
+  }
+}
+
+@media (width: 820px) {
+  .skills-content {
+    flex-direction: column;
+  }
+  .skills-info {
+    width: 100%;
   }
 }
 

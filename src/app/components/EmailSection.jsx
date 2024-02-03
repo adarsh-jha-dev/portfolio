@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import TwitterIcon from "../../../public/twitter.svg";
-import InstagramIcon from "../../../public/instagram.svg";
+import GithubIcon from "../../../public/images/socials/github-icon.svg";
+import LinkedinIcon from "../../../public/images/socials/linkedin-icon.svg";
+import TwitterIcon from "../../../public/images/socials/twitter.svg";
+import InstagramIcon from "../../../public/images/socials/instagram.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { Loader2 } from "lucide-react";
@@ -87,16 +87,30 @@ const EmailSection = () => {
           </Link>
           <Link href="https://www.linkedin.com/in/adarshjha0410">
             <Image
-              className="rounded-full"
+              height={40}
+              width={40}
+              className="mx-2"
               src={LinkedinIcon}
               alt="Linkedin Icon"
             />
           </Link>
           <Link href="https://twitter.com/Adarsh_Jha_0410">
-            <Image src={TwitterIcon} alt="Twitter Icon" />
+            <Image
+              height={40}
+              width={40}
+              className="mx-2"
+              src={TwitterIcon}
+              alt="Twitter Icon"
+            />
           </Link>
           <Link href="https://www.instagram.com/adarsh_glimpse/">
-            <Image src={InstagramIcon} alt="Instagram Icon" />
+            <Image
+              height={40}
+              width={40}
+              className="mx-2"
+              src={InstagramIcon}
+              alt="Instagram Icon"
+            />
           </Link>
         </div>
       </div>
