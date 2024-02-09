@@ -105,6 +105,11 @@ export const SKILLS = [
         icon: "/assets/skills/tools/figma.svg",
         docs: "https://www.figma.com/",
       },
+      {
+        skill: "Postman",
+        icon: "/assets/skills/tools/postman.svg",
+        docs: "https://learning.postman.com/",
+      },
     ],
   },
 ];
