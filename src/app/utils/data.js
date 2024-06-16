@@ -82,12 +82,11 @@ export const SKILLS = [
         icon: "/assets/skills/database/mysql.svg",
         docs: "https://dev.mysql.com/doc/",
       },
-      // TODO : Uncomment this whenever a project is made using Postgres
-      // {
-      //   skill: "PostgreSQL",
-      //   icon : "/assets/skills/database/postgresql.svg",
-      //   docs: "https://www.postgresql.org/docs/",
-      // },
+      {
+        skill: "PostgreSQL",
+        icon : "/assets/skills/database/postgresql.svg",
+        docs: "https://www.postgresql.org/docs/",
+      },
     ],
   },
   {
