@@ -39,13 +39,13 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "DigitalHippo",
+    title: "CaseCobra",
     description:
-      "A digital marketplace to buy digital assets such as - Icons, UI kits. Built the website using NextJS-14, new skills learned - nextjs-app-router, stripe-integration",
+      "A Web Application, built using NextJS with typescript, to create custom phone cases. Upload your picture, design the case as you want, make the payment, the case will be on it's way. New Skills - PostgreSQL, Prisma, Stripe",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/adarsh-jha-dev/nextjs-marketplace",
-    previewUrl: "https://nextjs-marketplace-production.up.railway.app/",
+    gitUrl: "https://github.com/adarsh-jha-dev/case-cobra",
+    previewUrl: "https://case-cobra-m8nu.vercel.app/",
   },
   {
     id: 5,
