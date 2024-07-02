@@ -59,13 +59,13 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Three JS T-Shirt Customizer using AI",
+    title: "NextJS Chat App",
     description:
-      "First ever project using three.js and react-fiber. A beautiful react application where one can design and visualize a T-Shirt with different colors and logos. One can upload a logo of it's own and design the T-Shirt. Users can download the customized T-shirt image as well. Integrated Hugging face's text-to-image generation model to generate the image/logo based on a prompt.",
+      "A real time chat application built using NextJS, TypeScript, Shadcn-ui, Covex DB, Clerk for Authentication. Fully responsive, can be coverted to an end-user mobile application",
     image: "/images/projects/6.png",
-    tag: ["All", "web"],
-    gitUrl: "https://github.com/adarsh-jha-dev/threejs",
-    previewUrl: "https://client-umber-nine.vercel.app",
+    tag: ["All", "Web", "Mobile"],
+    gitUrl: "https://github.com/adarsh-jha-dev/nextjs-chat",
+    previewUrl: "https://nextjs-chat-sandy-eta-85.vercel.app/",
   },
 ];
 
