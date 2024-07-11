@@ -65,6 +65,21 @@ export const SKILLS = [
         icon: "/assets/skills/backend/firebase.svg",
         docs: "https://firebase.google.com/",
       },
+      {
+        skill: "Nginx",
+        icon: "/assets/skills/backend/nginx.svg",
+        docs: "https://nginx.org/en/",
+      },
+      {
+        skill: "GraphQL",
+        icon: "/assets/skills/backend/graphql.png",
+        docs: "https://graphql.org/",
+      },
+      {
+        skill: "Redis",
+        icon: "/assets/skills/backend/redis.png",
+        docs: "https://redis.io/",
+      },
     ],
   },
   {
