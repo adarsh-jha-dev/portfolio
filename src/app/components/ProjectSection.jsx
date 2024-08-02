@@ -39,23 +39,23 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "CaseCobra",
+    title: "Podcastr",
     description:
-      "A Web Application, built using NextJS with typescript, to create custom phone cases. Upload your picture, design the case as you want, make the payment, the case will be on it's way. New Skills - PostgreSQL, Prisma, Stripe",
+      "A fully mobile responsive Web Application, built using NextJS with typescript, to create podcasts with AI voice. Give the transcript of your podcast, select the AI voice of your choice, use AI to generate the thumbnail or upload one of your own and that's it you're ready with your podcast. New Skills - AI Integration, ConvexDB",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/adarsh-jha-dev/case-cobra",
-    previewUrl: "https://case-cobra-m8nu.vercel.app/",
+    gitUrl: "https://github.com/adarsh-jha-dev/podcastr",
+    previewUrl: "https://podcastr-beryl-two.vercel.app/",
   },
   {
     id: 5,
-    title: "NextJS Admin Dashboard",
+    title: "Coffee Shop Landing Page",
     description:
-      "Mocked an Admin dashboard in NextJS, new skills learned - pagination, chart.js in react",
+      "A landing page for an imaginary coffee company, used framer motion for cool transition",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/adarsh-jha-dev/nextjs-dashboard",
-    previewUrl: "https://nextjs-dashboard-puce-seven-87.vercel.app/",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/adarsh-jha-dev/coffee-land",
+    previewUrl: "https://coders-coffee-land.netlify.app/",
   },
   {
     id: 6,
